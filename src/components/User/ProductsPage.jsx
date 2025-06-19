@@ -1,5 +1,5 @@
 import React, { use } from 'react'
-import './productsPage.css'
+import './ProductsPage.css'
 import NavBar from './NavBar_m'
 import { useState , useEffect} from 'react'
 import Loader from './Loader'

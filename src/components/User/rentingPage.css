@@ -1,0 +1,55 @@
+.renting-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* or 100vh for full viewport */
+}
+
+.productInputCard {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 500px;
+    height: 600px;
+    overflow: auto;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.productInputCard h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.productForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.productForm input {
+    margin-bottom: 32px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.productForm button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    left: 35%;
+}
+
+.productForm button:hover {
+    background-color: #218838;
+}

@@ -73,7 +73,7 @@ const MainPageProducts = () => {
         {products.map((product) => (
           <div key={product._id} className="product-card" id='mpPimg'>
             <img
-              src={`${ServerUrl}${product.image}`}
+              src={product.image}
               alt={product.name}
             />
             <div className="pName">

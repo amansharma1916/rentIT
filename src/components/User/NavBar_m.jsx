@@ -41,7 +41,7 @@ const NavBar_m = () => {
       const data = await res.json();
       console.log("Image uploaded successfully:", data);
       // Set in component state
-      setProfileImage(`${ServerUrl}${data.profileImage}`);
+      setProfileImage(data.profileImage);
 
     } else {
       console.error("Failed to upload image");
@@ -90,7 +90,7 @@ const getProfileImage = async () => {
       if (data.user.profileImage === '') {
         setProfileImage('src/components/User/images/guest_user.png');
       } else {
-        setProfileImage(`${ServerUrl}${data.user.profileImage}`);
+        setProfileImage(data.user.profileImage);
       }
       // console.log("Profile image fetched successfully:", data.user.profileImage);
     } else {

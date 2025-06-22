@@ -1,0 +1,11 @@
+.userProductCard{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8ebeb;
+    flex-wrap: wrap;
+    gap: 5rem;
+    
+}

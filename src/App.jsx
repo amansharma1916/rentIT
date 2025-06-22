@@ -8,6 +8,7 @@ import ProtectedRoutes from './ProtectedRoutes'
 import MainPage from './components/User/mainPage'
 import RentingPage from './components/User/rentingPage'
 import ProductsPage from './components/User/ProductsPage'
+import EditProductPage from './components/User/EditProductPage'
 function App() {
   
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/user/rent' element={<ProtectedRoutes><RentingPage /></ProtectedRoutes>} />
           <Route path='/user/products' element={<ProtectedRoutes><ProductsPage /></ProtectedRoutes>} />
           <Route path='/user/home' element={<ProtectedRoutes><MainPage /></ProtectedRoutes>} />
+          <Route path='/user/editProduct' element={<ProtectedRoutes><EditProductPage /></ProtectedRoutes>} />
           <Route path='*' element={<h1>404 Not Found</h1>} />
         </Routes>
       </BrowserRouter>

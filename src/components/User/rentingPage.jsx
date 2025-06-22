@@ -3,8 +3,10 @@ import './rentingPage.css'
 import NavBar from './NavBar_m'
 import { useState , useEffect} from 'react'
 const ServerUrl  = import.meta.env.VITE_BASE_SERVER_URL;
+import { useNavigate } from 'react-router-dom';
 
 const RentingPage = () => {
+    const Navigate = useNavigate();
     const [productImage, setProductImage] = useState(null);
     const [productName, setProductName] = useState('');
     const [productDescription, setProductDescription] = useState('');
@@ -52,6 +54,10 @@ const RentingPage = () => {
         }
     };
 
+    const handelEditProduct = () =>{
+      Navigate('/user/editProduct');
+    }
+
 
   return (
     <div>
@@ -70,6 +76,7 @@ const RentingPage = () => {
             <input type="number" placeholder="Quantity Available" required value={quantityAvailable} onChange={(e) => setQuantityAvailable(e.target.value)} />
             <button type="submit" onClick={handleProductAdd}>Submit</button>
             </form>
+            <button onClick={handelEditProduct} id='productEditButton'>Edit Rented Products</button>
        </div>
      </div>
     </div>

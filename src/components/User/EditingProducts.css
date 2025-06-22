@@ -1,0 +1,20 @@
+.edit-form-container {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 30px auto;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.edit-product-form input,
+.edit-product-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: space-between;
+}

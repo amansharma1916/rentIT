@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <a href="https://rentit-app.vercel.app"><img src="https://img.shields.io/badge/Live Demo-brightgreen?style=for-the-badge&logo=vercel" /></a>
+  <a href="https://rent-it-app.onrender.com/"><img src="https://img.shields.io/badge/Live Demo-brightgreen?style=for-the-badge&logo=vercel" /></a>
   <a href="https://github.com/amansharma/rentit"><img src="https://img.shields.io/badge/GitHub-Code-black?style=for-the-badge&logo=github" /></a>
 </p>
 

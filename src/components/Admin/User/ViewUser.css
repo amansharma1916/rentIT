@@ -1,0 +1,126 @@
+/* Main container */
+.viewUserContainer {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+}
+
+/* Section title */
+.userDetails h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Loading text */
+.userDetails p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* User cards grid */
+.userDetail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Single user card */
+.userCard {
+  position: relative; 
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.userCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Username & Email styling */
+.username, .email {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.username {
+  font-weight: bold;
+}
+
+/* Button containers */
+.userProducts, .userRentals {
+  margin-top: 15px;
+}
+
+/* Action buttons */
+.userProduct-btn, .userRentals-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.userProduct-btn:hover, .userRentals-btn:hover {
+  background-color: #0056b3;
+}
+
+.userProduct-btn{
+    background: #239494;
+}
+
+.back-btn{
+    background-color: #f0f0f0;
+  color: #2c3e50;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+    background-color: #e2e6ea;
+  border-color: #bfc2c5;
+  color: #000;
+}
+
+/* Remove button */
+.removeUser {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  height: 30px;
+  width: 80px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 1;
+}
+
+.removeUser:hover {
+  background-color: #c0392b;
+}

@@ -27,6 +27,31 @@
     transform: scale(1.05);
 }
 
+.ribbon {
+  position: absolute;
+  top: 10px;
+  right: -40px;
+  transform: rotate(45deg);
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 40px;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure product-card is relatively positioned */
+.product-card {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+
 .product-card img {
   max-width: 100%;
   height: 300px;

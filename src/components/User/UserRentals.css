@@ -1,0 +1,36 @@
+.UserRentalcontainer {
+  padding: 20px;
+}
+
+.userRentalBar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.myrentalbar {
+  display: flex;
+  justify-content: space-between;
+    align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.barimg img {
+  max-width: 100px;
+  border-radius: 5px;
+}
+
+.barname,
+.barprice,
+.barqnty {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.userRentalFooter {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}

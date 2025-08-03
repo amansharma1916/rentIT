@@ -1,0 +1,33 @@
+.OrderPageNav{
+    height: 12.5vh;
+    width: 100%;
+    background-color: rgb(100, 105, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50%;
+}
+
+.OrderPageNav button{
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #2bff00;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    
+}
+
+.OrderPageNav button:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+    .OrderPageNav{
+      gap: 0;
+    }
+}

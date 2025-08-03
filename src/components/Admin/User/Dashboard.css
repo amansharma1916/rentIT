@@ -1,0 +1,109 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Main container */
+.adminColumnMain {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Header styling */
+.adminHeader {
+    position: relative;
+  background: linear-gradient(135deg, #007BFF, #00C6FF);
+  color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  text-align: center;
+}
+
+.adminHeader h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.adminHeader p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Card container */
+.adminContent {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card styling */
+.adminCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.adminCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.adminCard h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+/* Button styling */
+.adminButton {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.adminButton:hover {
+  background-color: #0056b3;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  position: absolute;
+  z-index: 1;
+  right: 0%;
+  top: 0;
+  color: white;
+  border: none;
+  width: 70px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 6px rgba(231, 76, 60, 0.3);
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+}

@@ -35,9 +35,30 @@ function LoginPage() {
       }
     };
 
+    const pingServer = async () => {
+      try {
+        const response = await fetch(`${ServerUrl}/ping`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Server responded:', data.message);
+        } else {
+          throw new Error('Failed to ping server');
+        }
+      } catch (error) {
+        console.error('Error pinging server:', error);
+      }
+    };
+
   const Navigate = useNavigate();
   useEffect(() => {
     document.title = 'Login - RentIT';
+    pingServer(); 
   }, []);
 
   const handelSignin = async (e) => {
@@ -52,12 +73,12 @@ function LoginPage() {
       });
 
       if (response.ok) {
-        localStorage.setItem('userId', userId); // Store user ID
-        localStorage.setItem('isLoggedIn', 'true'); // Store login state
-        localStorage.setItem('username', username); // Store username
+        localStorage.setItem('userId', userId); 
+        localStorage.setItem('isLoggedIn', 'true'); 
+        localStorage.setItem('username', username); 
         setIsLoggedIn(true);
         
-        await getuserDetail(); // Fetch user details after successful login
+        await getuserDetail();
         Navigate('/mainPage');
       } else {
         const data = await response.json();

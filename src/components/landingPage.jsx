@@ -2,6 +2,7 @@ import React from 'react'
 import './landingPage.css'
 import { Link, useNavigate } from 'react-router-dom'
 const ServerUrl  = import.meta.env.VITE_BASE_SERVER_URL;
+import { useEffect } from 'react';
 const landingPage = () => {
   const lProducts = [
     {
@@ -74,6 +75,30 @@ const landingPage = () => {
   const handelSignup = ()=>{
     Navigate('/signup');
   }
+
+    const pingServer = async () => {
+        try {
+          const response = await fetch(`${ServerUrl}/ping`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+  
+          if (response.ok) {
+            const data = await response.json();
+            console.log('Server responded:', data.message);
+          } else {
+            throw new Error('Failed to ping server');
+          }
+        } catch (error) {
+          console.error('Error pinging server:', error);
+        }
+      };
+  
+    useEffect(() => {
+      pingServer(); 
+    }, []);
 
   return (
     <div className="ParentPage">

@@ -29,10 +29,10 @@ const OrderPage = () => {
         <div className="OrderPage">
           <div className="OrderPageNav">
             <div className="OPNavL" ><button onClick={handleMyOrders} style={{height: clickedO?"5rem":"3rem",
-                marginTop: clickedO?"1rem":"0rem",backgroundColor: clickedO?"#ffffff":"transparent",color: clickedO?"#000000":"#2bff00"
+                marginTop: clickedO?"1rem":"0rem",backgroundColor: clickedO?"#ffffff":"transparent",color: clickedO?"#000000":"#000000ff"
             }}>My Rentals</button></div>
             <div className="OPNavR"><button onClick={handleMyProducts} style={{height: clicked?"5rem":"3rem",
-                marginTop: clicked?"1rem":"0rem",backgroundColor: clicked?"#ffffff":"transparent",color: clicked?"#000000":"#2bff00"
+                marginTop: clicked?"1rem":"0rem",backgroundColor: clicked?"#ffffff":"transparent",color: clicked?"#000000":"#000000ff"
             }}>My Products</button></div>
           </div>
           <div className="OrderPageContent">

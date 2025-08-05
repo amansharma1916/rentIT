@@ -69,10 +69,10 @@ const ViewUser = () => {
                 body: JSON.stringify({ userId })
             });
             if (!response.ok) throw new Error('Failed to remove user products');
-            // alert('User products removed successfully');
+            
         } catch (error) {
             console.error('Error removing user products:', error);
-            // alert('Failed to remove user products');
+            
         }
     }
 

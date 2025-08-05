@@ -8,7 +8,7 @@ const ServerUrl = import.meta.env.VITE_BASE_SERVER_URL;
 
 const EditProductPage = () => {
   const [products, setProducts] = useState([]);
-  const [EP, setEP] = useState(null); // Currently editing product
+  const [EP, setEP] = useState(null); 
 
   const fetchProducts = async () => {
     try {

@@ -1,9 +1,25 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+  animation: fadeInPage 1.5s ease-in-out; 
+}
+
+
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  animation: fadeInText 1.5s ease-in-out; 
 }
 
 .login-box {
@@ -13,6 +29,7 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   width: 360px;
   transition: transform 0.3s ease;
+  animation: fadeInBox 1.5s ease-in-out; 
 }
 
 .login-box:hover {
@@ -22,7 +39,8 @@
 .login-box h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #2d3436;
+  color: #2d3748;
+  font-weight: 700;
 }
 
 .input-group {
@@ -47,7 +65,7 @@
 }
 
 .input-group input:focus {
-  border-color: #2980b9;
+  border-color: #2b6cb0;
   background-color: #fff;
   outline: none;
 }
@@ -55,7 +73,7 @@
 .login-container button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(to right, #3498db, #2980b9);
+  background: linear-gradient(to right, #2b6cb0, #2980b9);
   color: white;
   border: none;
   font-weight: bold;
@@ -69,6 +87,7 @@
   background: linear-gradient(to right, #2980b9, #2471a3);
 }
 
+
 .bottom-text {
   margin-top: 20px;
   text-align: center;
@@ -77,11 +96,27 @@
 }
 
 .bottom-text a {
-  color: #3498db;
+  color: #2b6cb0;
   text-decoration: none;
   font-weight: 600;
 }
 
 .bottom-text a:hover {
   text-decoration: underline;
+}
+
+
+@keyframes fadeInPage {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInBox {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }

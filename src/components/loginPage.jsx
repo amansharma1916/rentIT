@@ -26,7 +26,7 @@ function LoginPage() {
           }
         }).then(data => {
           setUserId(data.userID);
-          localStorage.setItem('userId', data.userID); // Store user ID in local storage
+          localStorage.setItem('userId', data.userID); 
         }).catch(error => {
           console.error('Error fetching user details:', error);
         });

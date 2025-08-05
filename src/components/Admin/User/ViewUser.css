@@ -1,4 +1,4 @@
-/* Main container */
+
 .viewUserContainer {
   max-width: 1200px;
   margin: 40px auto;
@@ -7,7 +7,7 @@
   border-radius: 12px;
 }
 
-/* Section title */
+
 .userDetails h2 {
   text-align: center;
   font-size: 2rem;
@@ -15,21 +15,21 @@
   margin-bottom: 30px;
 }
 
-/* Loading text */
+
 .userDetails p {
   text-align: center;
   font-size: 1.2rem;
   color: #555;
 }
 
-/* User cards grid */
+
 .userDetail {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
-/* Single user card */
+
 .userCard {
   position: relative; 
   background-color: #ffffff;
@@ -44,7 +44,7 @@
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-/* Username & Email styling */
+
 .username, .email {
   font-size: 1rem;
   color: #34495e;
@@ -56,12 +56,12 @@
   font-weight: bold;
 }
 
-/* Button containers */
+
 .userProducts, .userRentals {
   margin-top: 15px;
 }
 
-/* Action buttons */
+
 .userProduct-btn, .userRentals-btn {
   background-color: #007BFF;
   color: white;
@@ -104,7 +104,7 @@
   color: #000;
 }
 
-/* Remove button */
+
 .removeUser {
   position: absolute;
   top: 12px;

@@ -1,121 +1,130 @@
-/* ----------------- Main Navbar Container ------------------ */
 .UpperNavBar_m {
-    background-color: rgb(192, 231, 231);
-    height: auto;
-    width: 100%;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* ----------------- Flex Layout ------------------ */
 .NavBar_m {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2vw;
-    flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ----------------- Left Side ------------------ */
 .leftNavBar_m {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-/* ----------------- Logo Styles ------------------ */
-.logo_m {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 70px;
-    background-color: #fff;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-
-.logo_m:hover {
-    transform: scale(1.05);
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo_m img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-/* ----------------- Username ------------------ */
-.mUserName {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.logo_m img:hover {
+  transform: scale(1.05);
 }
 
-/* ----------------- Right Side Links ------------------ */
+.mUserName h1 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
 .rightNavBar_m {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.flexBox_m {
+  display: flex;
+  align-items: center;
 }
 
 .mlinks {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .links_m {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .links_m:hover {
-    color: rgb(14, 72, 80);
+  background-color: #f0f0f0;
+  color: #007bff;
 }
 
-/* ----------------- Responsive ------------------ */
+.links_m_button {
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.links_m_button:hover {
+  background-color: #d9363e;
+  transform: scale(1.02);
+}
+
+.links_m_button:active {
+  transform: scale(0.97);
+}
+
+.links_m_button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 77, 79, 0.3);
+}
+
 @media (max-width: 768px) {
-    .UpperNavBar_m {
-        padding: 0.3rem 0;
-    }
-    .NavBar_m {
-        padding: 0 1vw;
-    }
-    .logo_m {
-        width: 50px;
-        height: 50px;
-    }
-    .mUserName {
-        font-size: 1rem;
-    }
-    .mlinks {
-        gap: 1rem;
-        font-size: 0.9rem;
-    }
-    .rightNavBar_m {
-        gap: 0.5rem;
-        font-size: 1rem;
-        align-items: center;
-        
-    }
-    .links_m_button{
-        font-size: 0.8rem;
-        height: inherit;
-        width: inherit;
-        padding: 0.5rem 1rem;
-    }
+  .NavBar_m {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+  .UpperNavBar_m {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mlinks {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .rightNavBar_m {
+    width: 100%;
+  }
+
+  .leftNavBar_m {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }

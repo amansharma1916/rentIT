@@ -1,36 +1,108 @@
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fbfd;
+}
+
 .UserRentalcontainer {
-  padding: 20px;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .userRentalBar {
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
 }
 
 .myrentalbar {
   display: flex;
+  align-items: center;
+  gap: 20px;
   justify-content: space-between;
-    align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  padding: 16px 24px;
+  transition: transform 0.2s ease;
+}
+
+.myrentalbar:hover {
+  transform: translateY(-4px);
 }
 
 .barimg img {
-  max-width: 100px;
-  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid #ddd;
 }
 
-.barname,
-.barprice,
-.barqnty {
-  flex: 1;
-  padding: 0 10px;
+.barname p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-left: 20px;
+}
+
+.barprice p,
+.barqnty p {
+  font-size: 16px;
+  color: #666;
+  margin-left: 20px;
+}
+
+.removeProduct button {
+  padding: 10px 16px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.removeProduct button:hover {
+  background-color: #d9363e;
 }
 
 .userRentalFooter {
-  margin-top: 20px;
-  padding: 10px;
-  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .myrentalbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .barimg img {
+    width: 100%;
+    height: auto;
+  }
+
+  .barname p,
+  .barprice p,
+  .barqnty p {
+    margin-left: 0;
+  }
+
+  .removeProduct button {
+    width: 100%;
+  }
 }

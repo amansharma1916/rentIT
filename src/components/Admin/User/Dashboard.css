@@ -1,18 +1,18 @@
-/* Reset and base styles */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f6f8;
 }
 
-/* Main container */
+
 .adminColumnMain {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
 }
 
-/* Header styling */
+
 .adminHeader {
     position: relative;
   background: linear-gradient(135deg, #007BFF, #00C6FF);
@@ -34,7 +34,7 @@ body {
   font-weight: 300;
 }
 
-/* Card container */
+
 .adminContent {
   margin-top: 40px;
   display: flex;
@@ -43,7 +43,7 @@ body {
   justify-content: center;
 }
 
-/* Card styling */
+
 .adminCard {
   background-color: white;
   border-radius: 12px;
@@ -65,7 +65,7 @@ body {
   font-size: 1.5rem;
 }
 
-/* Button styling */
+
 .adminButton {
   background-color: #007BFF;
   color: white;

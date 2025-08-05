@@ -33,8 +33,8 @@ const EditingProducts = ({ product, onClose, onUpdated }) => {
       });
       
       if (!res.ok) throw new Error('Update failed');
-      onUpdated();  // refetch updated products
-      onClose();    // close form
+      onUpdated();  
+      onClose();    
     } catch (err) {
       console.error(err);
     }
@@ -47,8 +47,8 @@ const EditingProducts = ({ product, onClose, onUpdated }) => {
       });
       
       if (!res.ok) throw new Error('Delete failed');
-      onUpdated();  // refetch updated products
-      onClose();    // close form
+      onUpdated();  
+      onClose();    
     } catch (err) {
       console.error(err);
     }

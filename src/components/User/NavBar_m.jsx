@@ -40,7 +40,7 @@ const NavBar_m = () => {
     if (res.ok) {
       const data = await res.json();
       console.log("Image uploaded successfully:", data);
-      // Set in component state
+      
       setProfileImage(data.profileImage);
 
     } else {
@@ -61,7 +61,7 @@ useEffect(() => {
     const res = await fetch(`${ServerUrl}/getUserId?username=${username}`);
     if (res.ok) {
       const data = await res.json();
-      // console.log("User ID fetched successfully:", data.userId);
+      
       setTempUserId(data.userId);
       
     } else {
@@ -92,7 +92,7 @@ const getProfileImage = async () => {
       } else {
         setProfileImage(data.user.profileImage);
       }
-      // console.log("Profile image fetched successfully:", data.user.profileImage);
+      
     } else {
       console.error("Failed to fetch profile image");
     }
@@ -111,7 +111,7 @@ getProfileImage();
 const handelLogout = () => {
   localStorage.removeItem('userId');
   localStorage.removeItem('username');
-  // localStorage.removeItem('profileImage');
+  
   Navigate('/login');
 }
 

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import './ProductsPage.css';
 import NavBar from './NavBar_m';
@@ -7,30 +8,25 @@ const ServerUrl = import.meta.env.VITE_BASE_SERVER_URL;
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [initialLoading, setInitialLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
+  const [initialLoading, setInitialLoading] = useState(true);
   const [skip, setSkip] = useState(0);
   const [hasMore, setHasMore] = useState(true);
   const limit = 6;
   const [rentedProducts, setRentedProducts] = useState(new Set());
 
   const fetchProducts = async () => {
-    skip === 0 ? null : setLoadingMore(true);
+    if (skip !== 0) setLoadingMore(true);
     const userId = localStorage.getItem('userId');
     if (!userId) {
-      setLoading(false);
       setInitialLoading(false);
       return;
     }
 
     try {
       await new Promise((r) => setTimeout(r, 500));
-      const res = await fetch(
-        `${ServerUrl}/getProductLoading/${userId}?skip=${skip}&limit=${limit}`
-      );
+      const res = await fetch(`${ServerUrl}/getProductLoading/${userId}?skip=${skip}&limit=${limit}`);
       if (!res.ok) throw new Error('Fetch failed');
-
       const data = await res.json();
 
       setProducts((prev) => [...prev, ...data]);
@@ -48,38 +44,26 @@ const ProductsPage = () => {
     fetchProducts();
   }, []);
 
-  const handleScroll = () => {
-    if (
-      window.innerHeight + window.scrollY >=
-        document.documentElement.offsetHeight - 100 &&
-      hasMore &&
-      !loadingMore &&
-      !initialLoading
-    ) {
-      fetchProducts();
-    }
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + window.scrollY >= document.documentElement.offsetHeight - 100 &&
+        hasMore && !loadingMore && !initialLoading
+      ) {
+        fetchProducts();
+      }
+    };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasMore, loadingMore, initialLoading]);
 
   const pID = localStorage.getItem('userId');
-  const ownerName = (product) => {
-    if (product.pId == pID) {
-      return 'You';
-    } else {
-      return product.ownerName;
-    }
-  };
+  const ownerName = (product) => (product.pId === pID ? 'You' : product.ownerName);
 
   const handleRent = async (product) => {
     const res = await fetch(`${ServerUrl}/rentProduct`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         userId: localStorage.getItem('userId'),
         productId: product._id,
@@ -90,10 +74,10 @@ const ProductsPage = () => {
     if (res.ok) {
       alert('Product rented successfully!');
       setRentedProducts((prev) => new Set(prev).add(product._id));
-      setProducts((prevProducts) =>
-        prevProducts.map((p) =>
+      setProducts((prev) =>
+        prev.map((p) =>
           p._id === product._id
-            ? { ...p, quantity: p.quantity - 1 , isRented: true }
+            ? { ...p, quantity: p.quantity - 1, isRented: true }
             : p
         )
       );
@@ -106,52 +90,47 @@ const ProductsPage = () => {
   return (
     <div>
       <NavBar />
-      <div className="products-list">
-        <div className="productContainerPP">
+      <div className="main-products-list">
+        <div className="main-product-container">
           {initialLoading && (
-            <div className="initial-loader">
+            <div className="main-initial-loader">
               <Loader />
             </div>
           )}
 
           {products.map((product) => (
-            <div key={product._id} className="product-card">
-              {product.isRented && (
-                <div className="ribbon">Already Rented</div>
-              )}
+            <div key={product._id} className="main-product-card">
+              {product.isRented && <div className="main-ribbon">Already Rented</div>}
 
-              <div className="pImg" id="mpPimg">
+              <div className="main-product-image">
                 <img src={product.image} alt={product.name} />
               </div>
 
-              <div className="pName">
+              <div className="main-product-name">
                 <h2>{product.name}</h2>
               </div>
-              <div className="pdesc">
+              <div className="main-product-desc">
                 <p>Description: {product.description}</p>
               </div>
-              <div className="pPrice">
-                <p>Price: Rs. {product.price}</p>
+              <div className="main-product-price">
+                <p>Price: ₹{product.price}</p>
               </div>
-              <div className="pQnty">
+              <div className="main-product-quantity">
                 <p>Quantity Available: {product.quantity}</p>
               </div>
 
-              <button
-                onClick={() => handleRent(product)}
-                className="rent-button"
-              >
+              <button onClick={() => handleRent(product)} className="main-rent-button">
                 Take Rent
               </button>
 
-              <div className="ownerName">
+              <div className="main-product-owner">
                 <p>Owner: {ownerName(product)}</p>
               </div>
             </div>
           ))}
 
           {!initialLoading && loadingMore && (
-            <div className="loader">
+            <div className="main-loader">
               <Loader />
             </div>
           )}

@@ -128,7 +128,6 @@ const landingPage = () => {
               <select name="location" id="loactionselect" placeholder='Location'>
                 <option value="Ranchi">Ranchi</option>
                 <option value="Jamshedpur">Jamshedpur</option>
-                {/* <option value="Ranchi"></option> */}
               </select>
               <button className='lsearchButton' id='searchbutton'>Search</button>
             </div>
@@ -141,7 +140,6 @@ const landingPage = () => {
 
         
       </div>
-      {/* Repeat lproductCard for more products */}
     </div>
     
     </div>

@@ -46,7 +46,7 @@ const MyProducts = () => {
 
   const handleShowCustomers = async (productId) => {
     if (expandedProductId === productId) {
-      setExpandedProductId(null); // collapse if already expanded
+      setExpandedProductId(null); 
       return;
     }
 

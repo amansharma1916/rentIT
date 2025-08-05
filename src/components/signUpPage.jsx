@@ -44,8 +44,8 @@ const handleSignUp = async (e) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        ...form,        // spreading username, email, password
-        userId: getuserId()  // sending uid from a function
+        ...form,        
+        userId: getuserId()  
       })
     });
 

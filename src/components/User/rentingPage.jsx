@@ -39,7 +39,7 @@ const RentingPage = () => {
 
             if (response.ok) {
                 alert("Product added successfully!");
-                // Reset the form
+                
                 setProductImage(null);
                 setProductName('');
                 setProductDescription('');

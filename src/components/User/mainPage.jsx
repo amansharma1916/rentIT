@@ -9,7 +9,7 @@ const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = () => {
-    // Implement search functionality here
+    
     console.log('Searching for:', searchTerm);
     setSearchTerm(''); 
   };

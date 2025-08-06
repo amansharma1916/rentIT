@@ -2,9 +2,10 @@ import React from 'react'
 import './mainPage.css'
 import NavBar from './NavBar_m'
 import { useState } from 'react'
-import MainPageProducts from './mainPageProducts'
+import ProductPage from './ProductsPage'
 const ServerUrl  = import.meta.env.VITE_BASE_SERVER_URL;
 import { useEffect } from 'react';
+import HomePageProduct from './HomePageProduct'
 const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -36,7 +37,7 @@ const MainPage = () => {
           </div> 
         </div>
         <div className="main-page-content">
-          <MainPageProducts />
+          <HomePageProduct />
         </div>
       </div>
     </div>
